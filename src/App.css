@@ -1,0 +1,357 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: radial-gradient(circle at top, #1f2937 0, #020617 55%);
+  color: #e5e7eb;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Main app container - centered layout */
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Header section */
+.app-header {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.brand h1 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.role-pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(55, 65, 81, 0.8);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.connect-btn,
+.secondary-btn {
+  border-radius: 999px;
+  padding: 8px 14px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.connect-btn {
+  background: #4f46e5;
+  color: #e5e7eb;
+}
+
+.connect-btn:hover {
+  background: #6366f1;
+}
+
+.secondary-btn {
+  background: transparent;
+  color: #9ca3af;
+  border: 1px solid #4b5563;
+}
+
+.secondary-btn:hover {
+  background: #111827;
+}
+
+/* Tabs navigation */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.tab {
+  border: none;
+  background: #020617;
+  color: #9ca3af;
+  padding: 8px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  background: #0f172a;
+}
+
+.tab.active {
+  background: #111827;
+  color: #e5e7eb;
+}
+
+/* Status message */
+.status {
+  margin: 6px 0 12px;
+  font-size: 0.85rem;
+  color: #a5b4fc;
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Card container */
+.card {
+  width: 100%;
+  max-width: 700px;
+  background: #020617;
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+  margin-top: 8px;
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.4rem;
+}
+
+/* Form layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px 20px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+input,
+select,
+textarea {
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+  background: #0f172a;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+  transition: border-color 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Buttons */
+.primary-btn {
+  margin-top: 8px;
+  background: #4f46e5;
+  color: #e5e7eb;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  justify-self: flex-start;
+  transition: background 0.2s ease;
+}
+
+.primary-btn:hover {
+  background: #6366f1;
+}
+
+.danger-btn {
+  margin-top: 10px;
+  background: #b91c1c;
+  color: #fee2e2;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.danger-btn:hover {
+  background: #dc2626;
+}
+
+/* QR block */
+.qr-block {
+  margin-top: 20px;
+  border-top: 1px solid #1f2937;
+  padding-top: 16px;
+}
+
+.qr-block h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.qr-block p {
+  margin: 6px 0;
+  font-size: 0.9rem;
+}
+
+.qr-block code {
+  display: block;
+  background: #0f172a;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  word-break: break-all;
+  margin-top: 8px;
+}
+
+.qr-wrapper {
+  margin-top: 12px;
+  padding: 12px;
+  background: #0b1120;
+  display: inline-block;
+  border-radius: 12px;
+}
+
+/* Verify controls */
+.verify-controls {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+  margin-bottom: 16px;
+}
+
+.verify-controls label {
+  flex: 1;
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.badge.valid {
+  background: rgba(22, 163, 74, 0.2);
+  color: #bbf7d0;
+}
+
+.badge.invalid {
+  background: rgba(220, 38, 38, 0.2);
+  color: #fecaca;
+}
+
+/* Credential details */
+.cred-details p {
+  margin: 8px 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.cred-details strong {
+  color: #e5e7eb;
+  font-weight: 600;
+}
+
+.cred-details a {
+  color: #6366f1;
+  text-decoration: none;
+}
+
+.cred-details a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-root {
+    padding: 16px 12px 32px;
+  }
+
+  .app-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .brand h1 {
+    font-size: 1.3rem;
+  }
+
+  .card {
+    padding: 20px 16px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .verify-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .verify-controls button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs {
+    width: 100%;
+  }
+
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+}
